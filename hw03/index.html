@@ -86,7 +86,7 @@
     color: rgb(106, 76, 156);
     font-family: 'CircleFont', 'Noto Sans JP', serif;
   }
-
+  
   .container-fluid {
     width:  90%;
   }
@@ -122,7 +122,30 @@
   .toprow {
     margin-top: 36px;
   }
+  .image-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+        }
 
+        .image-container img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.5s ease-in-out;
+        }
+  .image-container img.hover-img {
+            opacity: 0;
+        }
+
+  .image-container:hover img.hover-img {
+            opacity: 1;
+        }
+
+  .image-container:hover img.default-img {
+            opacity: 0;
+        }
+  
   .bottomrow {
     margin-bottom: 36px;
   }
@@ -147,16 +170,16 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <h1>作業 03</h1>
+      <h1>作業 03-相似分析</h1>
     </div>
   </div>
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
-    </div>
-  </div>
+      這次作業整體來說非常簡單，只需要下載同學們的字跡資料，再執行程式就能完成，而且還能透過程式計算出自己和哪位同學的字最相似，
+      讓我覺得非常有趣。從一開始的手寫練習，到最後看到自己的字變成電腦能辨識的格式，整個過程讓我覺得很新鮮、有趣，也有滿滿的成就感。
+      原本很難想像紙本的東西可以變成這樣數位化，讓我對字跡辨識有了初步的認識與興趣。</div>
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
@@ -170,22 +193,22 @@
         </tr>
         <tr>
           <td rowspan="4" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
-          <td id='m1'>4</td>
-          <td>Simple baseline - 描述</td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
+          <td id='m1'>3</td>
+          <td>Simple baseline - 上傳 1個與lpips和ssim有關的.csv檔</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
-          <td id='m2'>4</td>
-          <td>Medium baseline - 描述</td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
+          <td id='m2'>3</td>
+          <td>Medium baseline - 能夠在散點圖中呈現結果</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
-          <td id='m3'>2</td>
-          <td>Strong baseline - 描述</td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
+          <td id='m3'>4</td>
+          <td>Strong baseline - 製造hover效果</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
           <td id='m4'>-10</td>
           <td>沒有寫100字心得</td>
         </tr>
@@ -195,14 +218,18 @@
   </div>
 
   <!-- ------------------------------------------------>
-  <div class="row hw12 bottomrow">
-    <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">    
+      <figure>
+        <figcaption>其他人的"陳"和我的相似度</figcaption>
+            <img src="results.png" width="700px"/>
+        </figure>
     </div>
   </div>
-
+  <!-- ------------------------------------------------>
+  <div class="row hw12" align="center">
+    <iframe style="background-color: #fff;" src="hover.html" width="800" height="600" frameborder="0"></iframe>
+  </div>
   <!-- ------------------------------------------------>
 
   <!-- ------------------------------------------------>
