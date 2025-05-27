@@ -154,7 +154,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      這次我使用 ComfyUI 結合 Checkpoint 與 LoRA 模型來完成這次文字生成影片的作業時，感受到 AI 工具在創作上的強大潛力。透過 ComfyUI 節點式的操作介面，我可以清楚掌握每一步圖像生成的過程，並能快速調整模型參數以達到理想風格。Checkpoint 提供了基礎圖像風格的控制，而 LoRA 模型則進一步強化角色特徵與細節表現，讓生成內容更符合我的想像。整個過程中，我學會了如何搭配不同模型以實現創意構想，也更深入理解生成式 AI 的技術運作與潛能。這次作業不僅提升了我對 AI 創作流程的熟悉度，也激發我在未來更多視覺敘事上的應用想法。
     </div>
   </div>
 
@@ -170,22 +170,23 @@
         </tr>
         <tr>
           <td rowspan="4" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>4</td>
-          <td>Simple baseline - 描述</td>
+          <td>Simple baseline - Comfy UI 環境設定完成</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>4</td>
-          <td>Medium baseline - 描述</td>
+          <td>Medium baseline - 生成角色的圖片</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
-          <td>Strong baseline - 描述</td>
+          <td>Strong baseline - 生成完整角色動畫
+</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
           <td id='m4'>-10</td>
           <td>沒有寫100字心得</td>
         </tr>
@@ -197,12 +198,50 @@
   <!-- ------------------------------------------------>
   <div class="row hw12 bottomrow">
     <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+      <a href="https://civitai.com/models/28779/primemix">CheckPoint:PrimeMix</a><br>
+      <a href="https://civitai.com/models/79737/lora-shoal-concept-with-multires-noise-version">Lora:錦鱗 Concept (With multires noise version)</a><br> 
+       <td>1.Simple baseline - Comfy UI 環境設定完成</td><br>
+       <img src="1.png"  width="800" height="200"><br>
     </div>
   </div>
-
+  <div class="row hw12 bottomrow">
+    <div class="col-md-12 twenty">
+       <td>2.Medium baseline - 生成角色的圖片</td><br>
+       <img src="2.png"  width="500" height="600"><br>
+       <td> 使用提示詞:
+ "0": "white-haired man in black, sunglasses, hands in pockets, rebellious aura, walking left",
+  "10": "white-haired man in black, sunglasses, walking left past a fiery fighter, silent tension between them",
+  "20": "white-haired man in black, sunglasses, walking left, a girl watches him from afar with a soft expression",
+  "30": "white-haired man in black, sunglasses, walking left, red-haired rival stands motionless, air grows heavy",
+  "40": "white-haired man in black, sunglasses, walking left, electricity flickers as a stylish man approaches",
+  "50": "white-haired man in black, sunglasses, walking left, a cheerful girl waves brightly in the distance",
+  "60": "white-haired man in black, sunglasses, walking left, martial artist kicks through the air nearby",
+  "70": "white-haired man in black, sunglasses, walking left, a blue-haired soldier watches from above, silent",
+  "80": "white-haired man in black, sunglasses, walking left, shadowy figures grin in the alley as he passes",
+  "90": "white-haired man in black, sunglasses, walking left, snow swirls around as a cold-eyed girl appears",
+  "100": "white-haired man in black, sunglasses, walking left, faint flames flicker, haunted by forgotten memories",
+  "110": "white-haired man in black, sunglasses, walking left into the distance, untamed spirit undiminished"</td>
+    </div>
+  </div>
+  <div class="row hw12 bottomrow">
+    <div class="col-md-12 twenty">
+       <td>3.Strong baseline - 生成完整角色動畫</td><br>
+       <img src="3.gif" ><br>
+       <td> 使用提示詞:
+ "0": "white-haired man in black, sunglasses, hands in pockets, rebellious aura, walking left",
+  "10": "white-haired man in black, sunglasses, walking left past a fiery fighter, silent tension between them",
+  "20": "white-haired man in black, sunglasses, walking left, a girl watches him from afar with a soft expression",
+  "30": "white-haired man in black, sunglasses, walking left, red-haired rival stands motionless, air grows heavy",
+  "40": "white-haired man in black, sunglasses, walking left, electricity flickers as a stylish man approaches",
+  "50": "white-haired man in black, sunglasses, walking left, a cheerful girl waves brightly in the distance",
+  "60": "white-haired man in black, sunglasses, walking left, martial artist kicks through the air nearby",
+  "70": "white-haired man in black, sunglasses, walking left, a blue-haired soldier watches from above, silent",
+  "80": "white-haired man in black, sunglasses, walking left, shadowy figures grin in the alley as he passes",
+  "90": "white-haired man in black, sunglasses, walking left, snow swirls around as a cold-eyed girl appears",
+  "100": "white-haired man in black, sunglasses, walking left, faint flames flicker, haunted by forgotten memories",
+  "110": "white-haired man in black, sunglasses, walking left into the distance, untamed spirit undiminished"</td>
+    </div>
+  </div>
   <!-- ------------------------------------------------>
 
   <!-- ------------------------------------------------>
